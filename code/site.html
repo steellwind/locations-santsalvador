@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations - Mas Sant Salvador</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Augmentez la taille minimale */
+            gap: 20px;
+        }
+
+        .property {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* Permet de remplir l'espace vertical */
+        }
+
+        .property:hover {
+            transform: scale(1.02);
+        }
+
+        .property img {
+            width: 100%;
+            height: 250px; /* Augmentez la hauteur de l'image */
+            object-fit: cover;
+        }
+
+        .property-details {
+            padding: 15px;
+        }
+
+        .property-details h2 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        .property-details p {
+            color: #555;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Locations - Mas Sant Salvador</h1>
+</header>
+
+<div class="container">
+    <div class="property">
+        <img src="images/mas/570249174.jpg" alt="Mas Sant Salvador">
+        <div class="property-details">
+            <h2>Mas Sant Salvador</h2>
+            <p>Doté d'un jardin commun, le Mas Sant Salvador est une vieille maison de campagne séculaire.</p>
+            <p><strong>Capacité:</strong> Jusqu'à 4 personnes</p>
+            <a href="mas.html" class="button">Réserver</a>
+        </div>
+    </div>
+
+    <div class="property">
+        <img src="images/villa/375576693.jpg" alt="Villa San Salvador">
+        <div class="property-details">
+            <h2>Villa San Salvador</h2>
+            <p>Dotée d'un jardin et d'une piscine privée, la Villa San Salvador est située à Torreilles.</p>
+            <p><strong>Capacité:</strong> Jusqu'à 8 personnes</p>
+            <a href="villa.html" class="button">Réserver</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Locations - Mas Sant Salvador. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

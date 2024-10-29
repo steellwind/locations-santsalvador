@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa San Salvador - Informations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .return-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
+        }
+
+        .return-button:hover {
+            background-color: #e60000;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content-container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: #e6f7ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .amenities, .location {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .amenity, .room-info, .location-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .room-info {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .amenities .amenity-icon, .rooms .room-icon, .location .location-icon {
+            font-size: 1.2em;
+            color: #007bff;
+        }
+
+        .positive {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../villa.html" class="return-button">Retour au menu</a>
+    <h1>Villa San Salvador - Torreilles Plage</h1>
+</header>
+
+<div class="content-container">
+    <div class="highlight-box">
+        <p><strong>Villa avec jardin et piscine privée</strong> : Située dans la région magnifique de Torreilles Plage, la Villa San Salvador est idéale pour des séjours de détente. Profitez d'une <span class="positive">connexion Wi-Fi gratuite</span> et d'un <span class="positive">parking privé</span> inclus.</p>
+    </div>
+
+    <h2 class="section-title">Description de la Villa</h2>
+    <p>Cette villa récemment rénovée de 4 chambres offre des prestations modernes et confortables :</p>
+    <div class="rooms">
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 1 :</strong> 1 grand lit double</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 2 :</strong> 1 grand lit double</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 3 :</strong> 1 grand lit double</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 4 :</strong> 1 grand lit double</div>
+    </div>
+    <p>Capacité : 8 personnes. Ce logement climatisé dispose d'une <span class="positive">douche à l'italienne</span>, d'une cuisine entièrement équipée (four, micro-ondes, lave-linge, grille-pain, réfrigérateur) et d'un dressing pour plus de confort.</p>
+
+    <h2 class="section-title">Équipements et Services</h2>
+    <div class="amenities">
+        <div class="amenity"><span class="amenity-icon">🏊‍♂️</span> <span class="positive">Piscine extérieure privée</span></div>
+        <div class="amenity"><span class="amenity-icon">🚗</span> <span class="positive">Parking gratuit</span></div>
+        <div class="amenity"><span class="amenity-icon">🌐</span> <span class="positive">Connexion Wi-Fi gratuite</span></div>
+        <div class="amenity"><span class="amenity-icon">🚭</span> Chambres non-fumeurs</div>
+        <div class="amenity"><span class="amenity-icon">🔇</span> Logement insonorisé avec entrée privée</div>
+    </div>
+
+    <h2 class="section-title">Localisation</h2>
+    <p>La Villa San Salvador bénéficie d'un emplacement privilégié, avec plusieurs points d'intérêt à proximité :</p>
+    <div class="location">
+        <div class="location-info"><span class="location-icon">🏟️</span> Stade Gilbert Brutus à 13 km</div>
+        <div class="location-info"><span class="location-icon">🏰</span> Château royal de Collioure à 36 km</div>
+        <div class="location-info"><span class="location-icon">🦓</span> Réserve africaine de Sigean à 43 km</div>
+        <div class="location-info"><span class="location-icon">✈️</span> Aéroport de Perpignan-Rivesaltes à 20 km</div>
+    </div>
+</div>
+
+<footer>

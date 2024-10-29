@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas Sant Salvador - Détails</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7faff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            max-width: 90%;
+            margin: 20px 0;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; /* Allow wrapping of buttons */
+            justify-content: center; /* Center the buttons */
+            gap: 20px;
+            width: 100%; /* Make it take full width */
+            max-width: 800px; /* Limit max width */
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.5em;
+            width: 220px; /* Set a fixed width */
+            text-align: center;
+            transition: transform 0.2s ease, background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            position: relative; /* Allow positioning of images */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .button img {
+            width: 100%; /* Make image full width */
+            height: 150px; /* Set a fixed height */
+            border-radius: 8px 8px 0 0; /* Round top corners */
+            object-fit: cover; /* Cover the button area */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .return-button {
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 1.2em;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+            margin-top: 20px;
+            width: 200px; /* Fixed width for return button */
+            text-align: center;
+        }
+
+        .return-button:hover {
+            background-color: #e60000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mas Sant Salvador</h1>
+</header>
+
+<div class="main-container">
+    <!-- Button Section (Centered with Icons) -->
+    <div class="button-group">
+        <a href="mas detaille/presentationdulieu.html" class="button">
+            <img src="images/570251392.jpg" alt="Photo du mas" />
+            Photos du Mas
+        </a>
+        <a href="mas detaille/information.html" class="button">
+            <img src="images/Capture d’écran 2024-10-29 234620.png" alt="Informations" />
+            Informations
+        </a>
+        <a href="mas detaille/reservation.html" class="button">
+            <img src="images/Capture d’écran 2024-10-29 234704.png" alt="Réservation" />
+            Réservation
+        </a>
+        <a href="mas detaille/contactez-nous.html" class="button">
+            <img src="images/Capture d’écran 2024-10-29 234735.png" alt="Contactez-nous" />
+            Contactez-nous
+        </a>
+    </div>
+    <a href="site.html" class="return-button">Retour à l'accueil</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Locations - Mas Sant Salvador. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas Sant Salvador - Informations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .return-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
+        }
+
+        .return-button:hover {
+            background-color: #e60000;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content-container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-box {
+            background-color: #e6f7ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .amenities, .location {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .amenity, .room-info, .location-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .room-info {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .amenities .amenity-icon, .rooms .room-icon, .location .location-icon {
+            font-size: 1.2em;
+            color: #007bff;
+        }
+
+        .positive {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../mas.html" class="return-button">Retour au menu</a>
+    <h1>Mas Sant Salvador</h1>
+</header>
+
+<div class="content-container">
+    <div class="highlight-box">
+        <p><strong>Un havre de paix à Bompas</strong> : Le Mas Sant Salvador, maison de campagne centenaire, est idéalement situé à seulement 10 minutes des plages et de Perpignan. Profitez d'un <span class="positive">jardin commun</span>, d'une <span class="positive">connexion Wi-Fi gratuite</span> et d'un <span class="positive">parking privé</span> sur place.</p>
+    </div>
+
+    <h2 class="section-title">Description du Mas</h2>
+    <p>Ce charmant établissement vous accueille dans un cadre pittoresque avec plusieurs studios duplex, tous équipés pour un confort optimal :</p>
+    
+    <div class="rooms">
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Studio en Duplex 1 :</strong> 1 très grand lit double + 1 canapé-lit (Capacité : 4 personnes)</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Studio en Duplex 2 :</strong> 1 lit simple + 1 très grand lit double + 1 canapé-lit (Capacité : 4 personnes)</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Studio en Duplex 3 :</strong> 1 très grand lit double + 1 canapé-lit (Capacité : 4 personnes)</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Studio en Duplex 4 :</strong> 1 très grand lit double + 1 canapé-lit (Capacité : 3 personnes)</div>
+        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Studio en Duplex 5 :</strong> 1 très grand lit double + 1 canapé-lit (Capacité : 4 personnes)</div>
+    </div>
+
+    <h2 class="section-title">Équipements et Services</h2>
+    <div class="amenities">
+        <div class="amenity"><span class="amenity-icon">🚭</span> Chambres non-fumeurs</div>
+        <div class="amenity"><span class="amenity-icon">🌐</span> <span class="positive">Connexion Wi-Fi gratuite (7 Mb/s)</span></div>
+        <div class="amenity"><span class="amenity-icon">🚗</span> <span class="positive">Parking gratuit</span></div>
+        <div class="amenity"><span class="amenity-icon">☕</span> Plateau/bouilloire dans tous les hébergements</div>
+        <div class="amenity"><span class="amenity-icon">👨‍👩‍👧‍👦</span> Chambres familiales disponibles</div>
+    </div>
+
+    <h2 class="section-title">Localisation</h2>
+    <p>Le Mas Sant Salvador bénéficie d'un emplacement privilégié, à proximité de plusieurs attractions :</p>
+    <div class="location">
+        <div class="location-info"><span class="location-icon">🏖️</span> Plages de Torreilles à 10 minutes</div>
+        <div class="location-info"><span class="location-icon">🏰</span> Château royal de Collioure à 26 km</div>
+        <div class="location-info"><span class="location-icon">🌄</span> Argelès-sur-Mer à 21 km</div>
+        <div class="location-info"><span class="location-icon">✈️</span> Aéroport de Perpignan-Rivesaltes à 7 km</div>
+    </div>
+</div>
+
+<footer>
+    © 2024 Mas Sant Salvador. Tous droits réservés.
+</footer>
+
+</body>
+</html>
