@@ -119,6 +119,53 @@
         .return-button:hover {
             background-color: #ddd;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+                padding: 15px;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+                padding: 15px;
+            }
+
+            .gallery-container img {
+                height: 150px;
+                border: 2px solid #fff;
+            }
+
+            .return-button {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+                padding: 10px;
+            }
+
+            .gallery-container img {
+                height: 120px;
+                border: 1px solid #fff;
+            }
+
+            .return-button {
+                font-size: 0.8em;
+                padding: 6px 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,6 +175,7 @@
 </header>
 
 <div class="gallery-container">
+    <!-- Images -->
     <img src="mas/511581875.jpg" alt="Photo du Mas 1" onclick="openLightbox(0)">
     <img src="mas/511582646.jpg" alt="Photo du Mas 2" onclick="openLightbox(1)">
     <img src="mas/511583179.jpg" alt="Photo du Mas 3" onclick="openLightbox(2)">
@@ -170,24 +218,24 @@
         "mas/511589922.jpg", "mas/511593265.jpg", "mas/570249174.jpg", "mas/570249957.jpg",
         "mas/570251392.jpg"
     ];
-    
+
     let currentIndex = 0;
-    
+
     function openLightbox(index) {
         currentIndex = index;
         document.getElementById("lightbox-img").src = images[currentIndex];
         document.getElementById("lightbox").style.display = "flex";
     }
-    
+
     function closeLightbox() {
         document.getElementById("lightbox").style.display = "none";
     }
-    
+
     function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         document.getElementById("lightbox-img").src = images[currentIndex];
     }
-    
+
     function prevImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         document.getElementById("lightbox-img").src = images[currentIndex];

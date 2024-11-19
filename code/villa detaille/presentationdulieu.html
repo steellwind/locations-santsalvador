@@ -31,10 +31,10 @@
 
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 15px;
             padding: 20px;
-            max-width: 90%;
+            max-width: 100%;
             width: 1200px;
         }
 
@@ -119,12 +119,60 @@
         .return-button:hover {
             background-color: #ddd;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.8em;
+                padding: 15px;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .gallery-container img {
+                height: 150px;
+            }
+
+            .return-button {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5em;
+                padding: 10px;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 8px;
+            }
+
+            .gallery-container img {
+                height: 120px;
+            }
+
+            .return-button {
+                font-size: 0.8em;
+                padding: 6px 10px;
+            }
+
+            .close, .prev, .next {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    Présentation du Lieu - Villa San Salvador
+    Présentation du Lieu - Mas Sant Salvador
 </header>
 
 <div class="gallery-container">
@@ -144,7 +192,6 @@
     <img src="villa/599769309.jpg" alt="Photo de la Villa 14" onclick="openLightbox(13)">
     <img src="villa/604061695.jpg" alt="Photo de la Villa 15" onclick="openLightbox(14)">
     <img src="villa/604063263.jpg" alt="Photo de la Villa 16" onclick="openLightbox(15)">
-
 </div>
 
 <a href="../villa.html" class="return-button">Retour au menu</a>

@@ -127,6 +127,76 @@
             padding: 15px;
             width: 100%;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+
+            header {
+                font-size: 2em;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .amenities {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .amenity {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .location-info {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+
+            footer {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.8em;
+                padding: 10px;
+            }
+
+            .return-button {
+                font-size: 0.8em;
+                padding: 5px;
+            }
+
+            .section h2 {
+                font-size: 1.2em;
+            }
+
+            .section p {
+                font-size: 0.9em;
+            }
+
+            .location-info i {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>

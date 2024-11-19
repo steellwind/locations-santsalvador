@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mas Sant Salvador - Présentation</title>
     <style>
+        /* Style de base pour le corps */
         body {
             font-family: Arial, sans-serif;
             background-image: url('images/ENG-460363.jpg');
@@ -16,6 +17,7 @@
             padding: 0;
         }
 
+        /* En-tête de la page */
         header {
             background-color: rgba(0, 0, 0, 0.8);
             text-align: center;
@@ -24,6 +26,7 @@
             font-weight: bold;
         }
 
+        /* Conteneur principal */
         .content {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
@@ -33,10 +36,12 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
 
+        /* Style des sections */
         .section {
             margin-bottom: 20px;
         }
 
+        /* Titres des sections */
         .section h2 {
             font-size: 1.8em;
             border-bottom: 2px solid #fff;
@@ -44,17 +49,20 @@
             margin-bottom: 10px;
         }
 
+        /* Paragraphes des sections */
         .section p {
             font-size: 1.1em;
             line-height: 1.6;
         }
 
+        /* Mise en page des points forts et des appartements */
         .features, .apartments {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
 
+        /* Style individuel des éléments de fonctionnalités */
         .feature, .apartment {
             background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid #fff;
@@ -67,6 +75,7 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
 
+        /* Icônes et titres */
         .feature i, .apartment i {
             font-size: 2em;
             margin-bottom: 10px;
@@ -77,10 +86,12 @@
             margin-bottom: 10px;
         }
 
+        /* Style des menus déroulants */
         .dropdown {
             text-align: left;
         }
 
+        /* Boutons des menus déroulants */
         .dropdown button {
             width: 100%;
             padding: 10px;
@@ -93,10 +104,12 @@
             font-size: 1.1em;
         }
 
+        /* Boutons au survol */
         .dropdown button:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
 
+        /* Contenu déroulant */
         .dropdown-content {
             display: none;
             background-color: rgba(255, 255, 255, 0.1);
@@ -106,10 +119,12 @@
             border-radius: 5px;
         }
 
+        /* Affichage du contenu si bouton actif */
         .dropdown button.active + .dropdown-content {
             display: block;
         }
 
+        /* Bouton de retour */
         .return-button {
             position: absolute;
             top: 10px;
@@ -125,6 +140,7 @@
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         }
 
+        /* Effet au survol du bouton retour */
         .return-button:hover {
             background-color: #ddd;
         }
@@ -132,11 +148,16 @@
 </head>
 <body>
 
+<!-- En-tête de la page -->
 <header>Mas Sant Salvador</header>
 
+<!-- Bouton de retour -->
 <a href="../mas.html" class="return-button">Retour</a>
 
+<!-- Contenu principal -->
 <div class="content">
+
+    <!-- Section Description -->
     <div class="section">
         <h2>Description</h2>
         <p>
@@ -151,32 +172,19 @@
         </p>
     </div>
 
+    <!-- Section Points forts -->
     <div class="section">
         <h2>Points forts</h2>
         <div class="features">
-            <div class="feature">
-                <i>🚭</i>
-                <h3>Chambres non-fumeurs</h3>
-            </div>
-            <div class="feature">
-                <i>📶</i>
-                <h3>Wi-Fi gratuit</h3>
-            </div>
-            <div class="feature">
-                <i>🚗</i>
-                <h3>Parking gratuit</h3>
-            </div>
-            <div class="feature">
-                <i>👨‍👩‍👧‍👦</i>
-                <h3>Chambres familiales</h3>
-            </div>
-            <div class="feature">
-                <i>☕</i>
-                <h3>Plateau/bouilloire</h3>
-            </div>
+            <div class="feature"><i>🚭</i><h3>Chambres non-fumeurs</h3></div>
+            <div class="feature"><i>📶</i><h3>Wi-Fi gratuit</h3></div>
+            <div class="feature"><i>🚗</i><h3>Parking gratuit</h3></div>
+            <div class="feature"><i>👨‍👩‍👧‍👦</i><h3>Chambres familiales</h3></div>
+            <div class="feature"><i>☕</i><h3>Plateau/bouilloire</h3></div>
         </div>
     </div>
 
+    <!-- Section Appartements disponibles -->
     <div class="section">
         <h2>Appartements disponibles</h2>
         <div class="apartments">
@@ -199,26 +207,20 @@
                     <p>1 très grand lit double et 1 canapé-lit</p>
                 </div>
             </div>
-            <div class="dropdown">
-                <button onclick="toggleDropdown(this)">Studio Duplex - 4 personnes</button>
-                <div class="dropdown-content">
-                    <p>1 très grand lit double et 1 canapé-lit</p>
-                </div>
-            </div>
         </div>
     </div>
+
 </div>
 
+<!-- Script JavaScript pour les menus déroulants -->
 <script>
     function toggleDropdown(button) {
+        // Désactiver tous les autres boutons actifs
         const activeButtons = document.querySelectorAll('.dropdown button.active');
         activeButtons.forEach(btn => btn.classList.remove('active'));
         
-        if (!button.classList.contains('active')) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
-        }
+        // Basculer l'état du bouton actuel
+        button.classList.toggle('active');
     }
 </script>
 
