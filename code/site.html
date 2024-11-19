@@ -34,7 +34,7 @@
             background-color: rgba(0, 0, 0, 0.85);
             border-radius: 8px;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -104,6 +104,69 @@
             padding: 15px;
             font-size: 0.9em;
             letter-spacing: 1px;
+        }
+
+        /* Media Queries pour mobile */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .property img {
+                height: 200px;
+            }
+
+            .property-details h2 {
+                font-size: 1.2em;
+            }
+
+            .property-details p {
+                font-size: 0.9em;
+            }
+
+            .button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            footer {
+                font-size: 0.8em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .property img {
+                height: 180px;
+            }
+
+            .property-details h2 {
+                font-size: 1em;
+            }
+
+            .property-details p {
+                font-size: 0.85em;
+            }
+
+            .button {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+
+            footer {
+                font-size: 0.7em;
+                padding: 8px;
+            }
         }
     </style>
 </head>
