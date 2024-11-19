@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentation du Lieu - Mas Sant Salvador</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            background-image: url('images/ENG-460363.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,22 +20,19 @@
         }
 
         header {
-            background-color: #007bff;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             width: 100%;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 2em;
+            font-weight: bold;
         }
 
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
             padding: 20px;
             max-width: 90%;
             width: 1200px;
@@ -40,17 +40,21 @@
 
         .gallery-container img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s, border-color 0.3s;
         }
 
         .gallery-container img:hover {
             transform: scale(1.05);
+            border-color: #999;
         }
 
+        /* Lightbox container for viewing images in larger format */
         .lightbox {
             display: none;
             position: fixed;
@@ -58,7 +62,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.85);
             justify-content: center;
             align-items: center;
             z-index: 10;
@@ -66,7 +70,7 @@
 
         .lightbox img {
             max-width: 90%;
-            max-height: 90%;
+            max-height: 80%;
             border-radius: 10px;
         }
 
@@ -101,37 +105,26 @@
         }
 
         .return-button {
-            background-color: #ff4d4d;
-            color: white;
-            font-size: 1.2em;
-            padding: 12px 20px;
-            border-radius: 8px;
+            background-color: #fff;
+            color: #000;
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.2s ease;
+            transition: background-color 0.3s;
             margin: 20px 0;
-            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
         }
 
         .return-button:hover {
-            background-color: #e60000;
-            transform: scale(1.05);
-        }
-
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            width: 100%;
-            margin-top: auto;
+            background-color: #ddd;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Présentation du Lieu</h1>
+    Présentation du Lieu - Mas Sant Salvador
 </header>
 
 <div class="gallery-container">
@@ -168,58 +161,33 @@
     <span class="next" onclick="nextImage()">&#10095;</span>
 </div>
 
-<footer>
-    <p>&copy; 2024 Locations - Mas Sant Salvador. Tous droits réservés.</p>
-</footer>
-
 <script>
-    // Liste des images
     const images = [
-        "mas/511581875.jpg",
-        "mas/511582646.jpg",
-        "mas/511583179.jpg",
-        "mas/511583826.jpg",
-        "mas/511584507.jpg",
-        "mas/511584813.jpg",
-        "mas/511585653.jpg",
-        "mas/511585896.jpg",
-        "mas/511586350.jpg",
-        "mas/511586540.jpg",
-        "mas/511586809.jpg",
-        "mas/511587279.jpg",
-        "mas/511587789.jpg",
-        "mas/511587961.jpg",
-        "mas/511588983.jpg",
-        "mas/511589746.jpg",
-        "mas/511589922.jpg",
-        "mas/511593265.jpg",
-        "mas/570249174.jpg",
-        "mas/570249957.jpg",
+        "mas/511581875.jpg", "mas/511582646.jpg", "mas/511583179.jpg", "mas/511583826.jpg",
+        "mas/511584507.jpg", "mas/511584813.jpg", "mas/511585653.jpg", "mas/511585896.jpg",
+        "mas/511586350.jpg", "mas/511586540.jpg", "mas/511586809.jpg", "mas/511587279.jpg",
+        "mas/511587789.jpg", "mas/511587961.jpg", "mas/511588983.jpg", "mas/511589746.jpg",
+        "mas/511589922.jpg", "mas/511593265.jpg", "mas/570249174.jpg", "mas/570249957.jpg",
         "mas/570251392.jpg"
     ];
-
-    // Index de l'image actuelle
+    
     let currentIndex = 0;
-
-    // Ouvre la lightbox et affiche l'image sélectionnée
+    
     function openLightbox(index) {
         currentIndex = index;
         document.getElementById("lightbox-img").src = images[currentIndex];
         document.getElementById("lightbox").style.display = "flex";
     }
-
-    // Ferme la lightbox
+    
     function closeLightbox() {
         document.getElementById("lightbox").style.display = "none";
     }
-
-    // Affiche l'image suivante
+    
     function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         document.getElementById("lightbox-img").src = images[currentIndex];
     }
-
-    // Affiche l'image précédente
+    
     function prevImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         document.getElementById("lightbox-img").src = images[currentIndex];

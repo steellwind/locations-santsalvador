@@ -3,110 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa San Salvador - Informations</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Villa San Salvador - Présentation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-image: url('images/ENG-460363.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         header {
-            background-color: #007bff;
-            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
             text-align: center;
             padding: 20px;
-            width: 100%;
-            position: relative;
+            font-size: 2.5em;
+            font-weight: bold;
         }
 
         .return-button {
             position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #ff4d4d;
-            color: white;
-            font-size: 1em;
-            padding: 10px 15px;
-            border-radius: 8px;
+            top: 10px;
+            left: 10px;
+            background-color: #fff;
+            color: #000;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.2s ease;
-            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         }
 
         .return-button:hover {
-            background-color: #e60000;
-            transform: scale(1.05);
+            background-color: #ddd;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        .content-container {
-            width: 90%;
-            max-width: 1200px;
-            background-color: white;
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .section-title {
-            font-size: 1.5em;
-            margin-top: 20px;
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
         .highlight-box {
-            background-color: #e6f7ff;
-            border-left: 4px solid #007bff;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-left: 4px solid #fff;
             padding: 15px;
             margin: 20px 0;
             border-radius: 5px;
         }
 
-        .amenities, .location {
+        .amenities {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 15px;
         }
 
-        .amenity, .room-info, .location-info {
+        .amenity {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .amenity i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .amenity h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .location-info {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .room-info {
-            background-color: #f2f2f2;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .amenities .amenity-icon, .rooms .room-icon, .location .location-icon {
-            font-size: 1.2em;
-            color: #007bff;
-        }
-
-        .positive {
-            font-weight: bold;
-            color: #28a745;
+        .location-info i {
+            font-size: 1.5em;
+            color: #fff;
         }
 
         footer {
-            background-color: #007bff;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
             padding: 15px;
@@ -117,42 +132,95 @@
 <body>
 
 <header>
-    <a href="../villa.html" class="return-button">Retour au menu</a>
-    <h1>Villa San Salvador - Torreilles Plage</h1>
+    Villa San Salvador - Torreilles Plage
 </header>
 
-<div class="content-container">
+<a href="../villa.html" class="return-button">Retour au menu</a>
+
+<div class="content">
     <div class="highlight-box">
         <p><strong>Villa avec jardin et piscine privée</strong> : Située dans la région magnifique de Torreilles Plage, la Villa San Salvador est idéale pour des séjours de détente. Profitez d'une <span class="positive">connexion Wi-Fi gratuite</span> et d'un <span class="positive">parking privé</span> inclus.</p>
     </div>
 
-    <h2 class="section-title">Description de la Villa</h2>
-    <p>Cette villa récemment rénovée de 4 chambres offre des prestations modernes et confortables :</p>
-    <div class="rooms">
-        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 1 :</strong> 1 grand lit double</div>
-        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 2 :</strong> 1 grand lit double</div>
-        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 3 :</strong> 1 grand lit double</div>
-        <div class="room-info"><span class="room-icon">🛏️</span> <strong>Chambre 4 :</strong> 1 grand lit double</div>
+    <div class="section">
+        <h2>Description de la Villa</h2>
+        <p>Cette villa récemment rénovée de 4 chambres offre des prestations modernes et confortables :</p>
+        <div class="amenities">
+            <div class="amenity">
+                <i>🛏️</i>
+                <h3>Chambre 1</h3>
+                <p>1 grand lit double</p>
+            </div>
+            <div class="amenity">
+                <i>🛏️</i>
+                <h3>Chambre 2</h3>
+                <p>1 grand lit double</p>
+            </div>
+            <div class="amenity">
+                <i>🛏️</i>
+                <h3>Chambre 3</h3>
+                <p>1 grand lit double</p>
+            </div>
+            <div class="amenity">
+                <i>🛏️</i>
+                <h3>Chambre 4</h3>
+                <p>1 grand lit double</p>
+            </div>
+        </div>
+        <p>Capacité : 8 personnes. Ce logement climatisé dispose d'une <span class="positive">douche à l'italienne</span>, d'une cuisine entièrement équipée (four, micro-ondes, lave-linge, grille-pain, réfrigérateur) et d'un dressing pour plus de confort.</p>
     </div>
-    <p>Capacité : 8 personnes. Ce logement climatisé dispose d'une <span class="positive">douche à l'italienne</span>, d'une cuisine entièrement équipée (four, micro-ondes, lave-linge, grille-pain, réfrigérateur) et d'un dressing pour plus de confort.</p>
 
-    <h2 class="section-title">Équipements et Services</h2>
-    <div class="amenities">
-        <div class="amenity"><span class="amenity-icon">🏊‍♂️</span> <span class="positive">Piscine extérieure privée</span></div>
-        <div class="amenity"><span class="amenity-icon">🚗</span> <span class="positive">Parking gratuit</span></div>
-        <div class="amenity"><span class="amenity-icon">🌐</span> <span class="positive">Connexion Wi-Fi gratuite</span></div>
-        <div class="amenity"><span class="amenity-icon">🚭</span> Chambres non-fumeurs</div>
-        <div class="amenity"><span class="amenity-icon">🔇</span> Logement insonorisé avec entrée privée</div>
+    <div class="section">
+        <h2>Équipements et Services</h2>
+        <div class="amenities">
+            <div class="amenity">
+                <i>🏊‍♂️</i>
+                <h3>Piscine extérieure privée</h3>
+            </div>
+            <div class="amenity">
+                <i>🚗</i>
+                <h3>Parking gratuit</h3>
+            </div>
+            <div class="amenity">
+                <i>🌐</i>
+                <h3>Wi-Fi gratuit</h3>
+            </div>
+            <div class="amenity">
+                <i>🚭</i>
+                <h3>Chambres non-fumeurs</h3>
+            </div>
+            <div class="amenity">
+                <i>🔇</i>
+                <h3>Logement insonorisé</h3>
+            </div>
+        </div>
     </div>
 
-    <h2 class="section-title">Localisation</h2>
-    <p>La Villa San Salvador bénéficie d'un emplacement privilégié, avec plusieurs points d'intérêt à proximité :</p>
-    <div class="location">
-        <div class="location-info"><span class="location-icon">🏟️</span> Stade Gilbert Brutus à 13 km</div>
-        <div class="location-info"><span class="location-icon">🏰</span> Château royal de Collioure à 36 km</div>
-        <div class="location-info"><span class="location-icon">🦓</span> Réserve africaine de Sigean à 43 km</div>
-        <div class="location-info"><span class="location-icon">✈️</span> Aéroport de Perpignan-Rivesaltes à 20 km</div>
+    <div class="section">
+        <h2>Localisation</h2>
+        <p>La Villa San Salvador bénéficie d'un emplacement privilégié, avec plusieurs points d'intérêt à proximité :</p>
+        <div class="location-info">
+            <i>🏟️</i>
+            <p>Stade Gilbert Brutus à 13 km</p>
+        </div>
+        <div class="location-info">
+            <i>🏰</i>
+            <p>Château royal de Collioure à 36 km</p>
+        </div>
+        <div class="location-info">
+            <i>🦓</i>
+            <p>Réserve africaine de Sigean à 43 km</p>
+        </div>
+        <div class="location-info">
+            <i>✈️</i>
+            <p>Aéroport de Perpignan-Rivesaltes à 20 km</p>
+        </div>
     </div>
 </div>
 
 <footer>
+    Villa San Salvador - Torreilles Plage
+</footer>
+
+</body>
+</html>

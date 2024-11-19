@@ -4,105 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa San Salvador - Détails</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7faff;
+            font-family: 'Arial', sans-serif;
+            background-image: url('images/ENG-460363.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
             margin: 0;
             padding: 0;
+            backdrop-filter: grayscale(50%);
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            width: 100%;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        .main-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Align items to the top */
-            max-width: 90%;
-            margin: 20px 0;
-            gap: 20px;
-            flex-wrap: wrap; /* Allow items to wrap */
-        }
-
         .button-group {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap; /* Allow wrapping of buttons */
-            justify-content: center; /* Center the buttons */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
-            width: 100%; /* Make it take full width */
-            max-width: 800px; /* Limit max width */
+            width: 100%;
+            margin-top: 20px;
+            padding: 20px 0;
         }
 
         .button {
-            background-color: #007bff;
+            background-color: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 20px;
-            text-decoration: none;
+            padding: 0;
             border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
-            font-size: 1.5em;
-            width: 220px; /* Set a fixed width */
             text-align: center;
-            transition: transform 0.2s ease, background-color 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-            position: relative; /* Allow positioning of images */
-            overflow: hidden; /* Hide overflow */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
         }
 
         .button img {
-            width: 100%; /* Make image full width */
-            height: 150px; /* Set a fixed height */
-            border-radius: 8px 8px 0 0; /* Round top corners */
-            object-fit: cover; /* Cover the button area */
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            opacity: 1;
+            border-radius: 8px 8px 0 0;
         }
 
         .button:hover {
-            background-color: #0056b3;
             transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .button span {
+            padding: 15px;
+            font-size: 1.2em;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
         .return-button {
-            background-color: #ff4d4d;
+            background-color: black;
             color: white;
-            font-size: 1.2em;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
             font-weight: bold;
-            transition: transform 0.2s ease;
-            margin-top: 20px;
-            width: 200px; /* Fixed width for return button */
+            font-size: 1em;
             text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid white;
+            margin-top: 20px;
         }
 
         .return-button:hover {
-            background-color: #e60000;
-            transform: scale(1.05);
-        }
-
-        footer {
-            background-color: #007bff;
+            background-color: #333;
             color: white;
-            text-align: center;
-            padding: 15px;
-            width: 100%;
-            margin-top: auto;
+            border: 2px solid #ddd;
         }
     </style>
 </head>
@@ -113,31 +110,27 @@
 </header>
 
 <div class="main-container">
-    <!-- Button Section (Centered with Icons) -->
     <div class="button-group">
         <a href="villa detaille/presentationdulieu.html" class="button">
             <img src="images/375576693.jpg" alt="Photo du lieu" />
-            Photos du Lieu
+            <span>Photos du Lieu</span>
         </a>
         <a href="villa detaille/information.html" class="button">
             <img src="images/Capture d’écran 2024-10-29 234620.png" alt="Informations" />
-            Informations
+            <span>Informations</span>
         </a>
         <a href="villa detaille/reservation.html" class="button">
             <img src="images/Capture d’écran 2024-10-29 234704.png" alt="Réservation" />
-            Réservation
+            <span>Réservation</span>
         </a>
         <a href="villa detaille/contactez-nous.html" class="button">
             <img src="images/Capture d’écran 2024-10-29 234735.png" alt="Contactez-nous" />
-            Contactez-nous
+            <span>Contactez-nous</span>
         </a>
     </div>
+
     <a href="site.html" class="return-button">Retour à l'accueil</a>
 </div>
-
-<footer>
-    <p>&copy; 2024 Locations - Mas Sant Salvador. Tous droits réservés.</p>
-</footer>
 
 </body>
 </html>

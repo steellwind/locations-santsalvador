@@ -6,93 +6,104 @@
     <title>Locations - Mas Sant Salvador</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-image: url('images/ENG-460363.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
             margin: 0;
             padding: 0;
+            backdrop-filter: grayscale(50%);
         }
 
         header {
-            background-color: #007bff;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
             padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
         .container {
-            padding: 20px;
+            padding: 40px;
             max-width: 1200px;
             margin: auto;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.85);
+            border-radius: 8px;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Augmentez la taille minimale */
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 20px;
         }
 
         .property {
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.2s;
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 100%; /* Permet de remplir l'espace vertical */
+            height: 100%;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .property:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
         }
 
         .property img {
             width: 100%;
-            height: 250px; /* Augmentez la hauteur de l'image */
+            height: 250px;
             object-fit: cover;
         }
 
         .property-details {
-            padding: 15px;
+            padding: 20px;
         }
 
         .property-details h2 {
             margin: 0;
-            color: #007bff;
+            color: #ffffff;
+            font-size: 1.4em;
+            font-weight: bold;
         }
 
         .property-details p {
-            color: #555;
+            color: #ddd;
+            font-size: 0.95em;
+            margin: 8px 0;
         }
 
         .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 15px;
             display: inline-block;
-            margin-top: 10px;
         }
 
         .button:hover {
-            background-color: #0056b3;
+            background-color: #fff;
+            color: #000;
         }
 
         footer {
-            background-color: #007bff;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 15px;
+            font-size: 0.9em;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -108,7 +119,7 @@
         <div class="property-details">
             <h2>Mas Sant Salvador</h2>
             <p>Doté d'un jardin commun, le Mas Sant Salvador est une vieille maison de campagne séculaire.</p>
-            <p><strong>Capacité:</strong> Jusqu'à 4 personnes</p>
+            <p><strong>Capacité:</strong> Jusqu'à 4 personnes par appartement</p>
             <a href="mas.html" class="button">Réserver</a>
         </div>
     </div>
